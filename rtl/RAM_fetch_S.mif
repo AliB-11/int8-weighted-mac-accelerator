@@ -1,0 +1,155 @@
+-- Copyright (C) 2019  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=32;
+DEPTH=256;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+
+0    : 0720FF20;
+1    : 00C00060;
+2    : FF900010;
+3    : 0050FFC0;
+4    : FFB00030;
+5    : 0010FFC0;
+6    : FFF00030;
+7    : FFF0FFD0;
+8    : 08C0FFF0;
+9    : FFA00030;
+10   : 00600020;
+11   : FFF0FFA0;
+12   : FFD00010;
+13   : 00400040;
+14   : 0000FFE0;
+15   : FFD0FFE0;
+16   : 0900FF90;
+17   : 00300000;
+18   : 0020FFD0;
+19   : 0030FFD0;
+20   : 0030FFF0;
+21   : 0020FFF0;
+22   : 0010FFF0;
+23   : 00100000;
+24   : 0B000000;
+25   : 0050FFD0;
+26   : 00000030;
+27   : FFF0FFF0;
+28   : 0020FFF0;
+29   : FFF00010;
+30   : 00000000;
+31   : 00100000;
+32   : 0AA00030;
+33   : 00500030;
+34   : 00200000;
+35   : FFF0FFF0;
+36   : 00000010;
+37   : 00000000;
+38   : 00000000;
+39   : 00000000;
+40   : 091001A0;
+41   : FFA0FF40;
+42   : 005000B0;
+43   : FFB0FFB0;
+44   : 00700020;
+45   : FF700020;
+46   : 0050FFC0;
+47   : FFF00050;
+48   : 0870FEE0;
+49   : FFC00050;
+50   : FF30FF20;
+51   : FF800030;
+52   : 0010FF90;
+53   : FFF00030;
+54   : 0070FFF0;
+55   : 00100000;
+56   : 09F0FF80;
+57   : FFA00020;
+58   : 00100050;
+59   : 00300040;
+60   : 00000000;
+61   : FFE0FFE0;
+62   : FFE00000;
+63   : 00000000;
+64   : 0850FFE0;
+65   : 00C00000;
+66   : FFD0FFA0;
+67   : 00200050;
+68   : 0010FFD0;
+69   : FFD00010;
+70   :   00300030;
+71   :   FFF0FFD0;
+72   :   0950FFE0;
+73   :   0000FFD0;
+74   :   FFE00020;
+75   :   00300000;
+76   :   00100040;
+77   :   0010FFF0;
+78   :   00000010;
+79   :   0000FFF0;
+80   :   08700040;
+81   :   FFC00010;
+82   :   00300090;
+83   :   00300010;
+84   :   00200010;
+85   :   FFE0FFB0;
+86   :   FFF0FFD0;
+87   :   FFF0FFF0;
+88   :   06900100;
+89   :   0000FFB0;
+90   :   00500060;
+91   :   FFB0FFC0;
+92   :   00400010;
+93   :   FFE00030;
+94   :   0010FFD0;
+95   :   FFF00020;
+96   :   FFE00050;
+97   :   0000FFF0;
+98   :   00200010;
+99   :   00000000;
+100  :   00100010;
+101  :   00000000;
+102  :   00000000;
+103  :   0000FF60;
+104  :   00200090;
+105  :   FFD0FFB0;
+106  :   FFE00000;
+107  :   00500010;
+108  :   FFF0FFE0;
+109  :   FFD00000;
+110  :   00200020;
+111  :   00100050;
+112  :   FF300040;
+113  :   0050FFE0;
+114  :   0020FFE0;
+115  :   0040FFD0;
+116  :   0020FFD0;
+117  :   0020FFF0;
+118  :   00100000;
+119  :   00000080;
+120  :   FFC0FFA0;
+121  :   00500000;
+122  :   FFD00020;
+123  :   0020FFD0;
+124  :   00100010;
+125  :   FFE00010;
+126  :   0010FFF0;
+127  :   00100000;
+	[128..255]  :   0;
+END;

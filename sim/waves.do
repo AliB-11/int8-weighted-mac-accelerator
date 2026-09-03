@@ -1,0 +1,184 @@
+# activate waveform simulation
+
+view wave
+
+# format signal names in waveform
+
+configure wave -signalnamewidth 1
+configure wave -timeline 0
+configure wave -timelineunits us
+
+# add signals to waveform
+
+add wave -divider -height 20 {Top-level signals}
+add wave -bin UUT/CLOCK_50_I
+add wave -bin UUT/resetn
+add wave UUT/top_state
+add wave -uns UUT/UART_timer
+
+add wave -divider -height 10 {SRAM signals}
+add wave -uns UUT/SRAM_address
+add wave -hex UUT/SRAM_write_data
+add wave -bin UUT/SRAM_we_n
+add wave -hex UUT/SRAM_read_data
+
+add wave -divider -height 10 {M3 signals}
+add wave -bin UUT/M3_unit/M3_start
+add wave -bin UUT/M3_unit/M3_done
+add wave -bin UUT/M3_unit/M3_state
+add wave -uns UUT/M3_unit/address
+add wave -bin UUT/M3_unit/mode
+add wave -bin UUT/M3_unit/shift_reg
+add wave -bin UUT/M3_unit/memory_data
+add wave -bin UUT/M3_unit/shift_counter
+add wave -bin UUT/M3_unit/bit_shift_unit
+add wave -uns UUT/M3_unit/write_address
+add wave -bin UUT/M3_unit/bits_left
+add wave -bin UUT/M3_unit/SHIFT
+add wave -uns UUT/M3_unit/value_1
+add wave -uns UUT/M3_unit/value_2
+add wave -bin UUT/M3_unit/row_index
+add wave -bin UUT/M3_unit/col_index
+add wave -uns UUT/M3_unit/variable_shift
+add wave -bin UUT/M3_unit/dir
+add wave -bin UUT/M3_unit/block_col_index
+add wave -bin UUT/M3_unit/block_row_index
+add wave -bin UUT/M3_unit/z_counter
+add wave -bin UUT/M3_unit/counter
+add wave -bin UUT/M3_unit/memory_type
+add wave -bin UUT/M3_unit/mem_offset
+
+
+
+add wave -divider -height 10 {M2 signals}
+add wave -bin UUT/M2_unit/start_signal
+add wave -hex UUT/M2_unit/fetch_address_a
+add wave -bin UUT/M2_unit/state
+add wave -bin UUT/M2_unit/M2_start_fetch
+add wave -hex UUT/M2_unit/SRAM_read_data
+add wave -bin UUT/M2_unit/M2_state
+add wave -uns UUT/M2_unit/block_counter
+add wave -bin UUT/M2_unit/col_index_F
+add wave -bin UUT/M2_unit/row_index_F
+add wave -dec UUT/M2_unit/SRAM_address_M2_fetch
+add wave -bin UUT/M2_unit/flag_1_F
+add wave -hex UUT/M2_unit/fetch_S_Buffer_F
+add wave -hex UUT/M2_unit/fetch_write_data_a
+add wave -hex UUT/M2_unit/write_data_a
+add wave -dec UUT/M2_unit/fetch_address_a
+add wave -dec UUT/M2_unit/address_a
+add wave -bin UUT/M2_unit/fetch_write_en_a 
+add wave -bin UUT/M2_unit/write_enable_a
+add wave -bin UUT/M2_unit/end_signal
+add wave -bin UUT/M2_unit/M2_finish_fetch
+
+add wave -divider -height 10 {M2 signals - T}
+add wave -bin UUT/M2_unit/start_signal
+#add wave -hex UUT/M2_unit/fetch_address_a
+add wave -bin UUT/M2_unit/state
+#add wave -bin UUT/M2_unit/M2_start_fetch
+add wave -hex UUT/M2_unit/SRAM_read_data
+add wave -bin UUT/M2_unit/M2_state
+#add wave -bin UUT/M2_unit/col_index_F
+#add wave -dec UUT/M2_unit/SRAM_address_M2_fetch 
+add wave -bin UUT/M2_unit/M2_start_Ct
+add wave -bin UUT/M2_unit/M2_finish_Ct
+add wave -bin UUT/M2_unit/end_signal
+add wave -bin UUT/M2_unit/M2_state_1
+add wave -bin UUT/M2_unit/iteration
+add wave -bin UUT/M2_unit/mode
+add wave -dec UUT/M2_unit/e_counter
+add wave -hex UUT/M2_unit/col_counter
+add wave -dec {UUT/M2_unit/Ct_address_a[0]}
+add wave -dec {UUT/M2_unit/Ct_address_b[0]}
+add wave -dec {UUT/M2_unit/Ct_address_a[1]}
+add wave -dec {UUT/M2_unit/Ct_address_b[1]}
+add wave -dec {UUT/M2_unit/Ct_address_a[2]}
+add wave -dec {UUT/M2_unit/Ct_address_b[2]}
+add wave -dec UUT/M2_unit/mult_op_1_1_Ct 
+add wave -dec UUT/M2_unit/mult_op_2_1_Ct 
+add wave -dec UUT/M2_unit/mult_op_3_1_Ct
+add wave -dec UUT/M2_unit/mult_op_1_2_Ct 
+add wave -dec UUT/M2_unit/mult_op_2_2_Ct
+add wave -dec UUT/M2_unit/mult_op_3_2_Ct
+add wave -bin UUT/M2_unit/Ct_flag_1
+add wave -dec UUT/M2_unit/accum_1
+add wave -dec UUT/M2_unit/Mult_result_1
+add wave -dec UUT/M2_unit/accum_2
+add wave -dec UUT/M2_unit/Mult_result_2
+add wave -dec UUT/M2_unit/accum_3
+add wave -dec UUT/M2_unit/accum_3_buf
+add wave -dec UUT/M2_unit/Mult_result_3
+add wave -dec UUT/M2_unit/Ct_write_data_a
+add wave -dec UUT/M2_unit/Ct_write_data_b
+add wave -bin UUT/M2_unit/Ct_w_en_a
+add wave -bin UUT/M2_unit/Ct_w_en_b
+add wave -bin UUT/M2_unit/M2_finish_Ct
+
+add wave -divider -height 10 {M2 signals - S}
+add wave -bin UUT/M2_unit/flag_1_Cs
+add wave -dec UUT/M2_unit/col_counter_Cs
+add wave -bin UUT/M2_unit/mode 
+add wave -bin UUT/M2_unit/iteration_Cs
+add wave -dec UUT/M2_unit/e_counter_Cs
+add wave -dec UUT/M2_unit/accum_1_Cs
+add wave -dec UUT/M2_unit/accum_2_Cs
+add wave -dec UUT/M2_unit/accum_3_Cs
+add wave -dec UUT/M2_unit/accum_3_buf_Cs
+add wave -dec UUT/M2_unit/Cs_write_data_a
+add wave -dec UUT/M2_unit/Cs_write_data_b
+
+add wave -bin UUT/M2_unit/M2_state_2
+
+add wave -dec UUT/M2_unit/mult_op_1_1_Cs 
+add wave -dec UUT/M2_unit/mult_op_2_1_Cs 
+add wave -dec UUT/M2_unit/mult_op_3_1_Cs
+add wave -dec UUT/M2_unit/mult_op_1_2_Cs 
+add wave -dec UUT/M2_unit/mult_op_2_2_Cs
+add wave -dec UUT/M2_unit/mult_op_3_2_Cs
+
+add wave -uns {UUT/M2_unit/Cs_address_a[1]}
+add wave -uns {UUT/M2_unit/Cs_address_b[1]}
+add wave -uns {UUT/M2_unit/Cs_address_a[0]}
+add wave -uns {UUT/M2_unit/Cs_address_b[0]}
+add wave -uns {UUT/M2_unit/Cs_address_a[2]}
+add wave -uns {UUT/M2_unit/Cs_address_b[2]}
+
+#add wave -dec {UUT/M2_unit/RAM_inst2/read_data_a[2]}
+
+add wave -bin UUT/M2_unit/Cs_w_en_a
+add wave -bin UUT/M2_unit/Cs_w_en_b 
+		
+add wave -bin UUT/M2_unit/M2_start_Cs 
+add wave -bin UUT/M2_unit/M2_finish_Cs
+
+
+#waves for writing to the SRAM
+
+
+add wave -bin UUT/M2_unit/start_signal
+add wave -bin UUT/M2_unit/state
+add wave -bin UUT/M2_unit/M2_state_3
+add wave -hex UUT/M2_unit/SRAM_w_en_M2_write
+add wave -uns UUT/M2_unit/address_a_M2_write 
+add wave -bin UUT/M2_unit/row_block
+add wave -bin UUT/M2_unit/col_block
+add wave -bin UUT/M2_unit/row_index
+add wave -bin UUT/M2_unit/col_index 
+add wave -dec UUT/M2_unit/fetch_S_buffer
+add wave -bin UUT/M2_unit/flag_1 
+add wave -bin UUT/M2_unit/flag_2
+add wave -bin UUT/M2_unit/start_flag_1
+add wave -hex UUT/M2_unit/SRAM_write_data_M2_write
+add wave -hex UUT/M2_unit/clip_1
+add wave -hex UUT/M2_unit/clip_2
+add wave -dec UUT/M2_unit/read_data_a
+add wave -bin UUT/M2_unit/end_signal
+add wave -bin UUT/M2_unit/M2_finish_write
+add wave -uns UUT/M2_unit/SRAM_address_M2_write
+
+
+
+
+
+
