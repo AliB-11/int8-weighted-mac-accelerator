@@ -1,12 +1,6 @@
-/*
-Copyright by Henry Ko and Nicola Nicolici
-Department of Electrical and Computer Engineering
-McMaster University
-Ontario, Canada
-*/
 
 
-// Milestone 2 // 
+
 
 `timescale 1ns/100ps
 `ifndef DISABLE_DEFAULT_NET

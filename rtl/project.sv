@@ -1,9 +1,4 @@
-/*
-Copyright by Henry Ko and Nicola Nicolici
-Department of Electrical and Computer Engineering
-McMaster University
-Ontario, Canada
-*/
+
 
 `timescale 1ns/100ps
 `ifndef DISABLE_DEFAULT_NET
@@ -12,9 +7,7 @@ Ontario, Canada
 
 `include "define_state.h"
 
-// This is the top module (same as experiment4 from lab 5 - just module renamed to "project")
-// It connects the UART, SRAM and VGA together.
-// It gives access to the SRAM for UART and VGA
+
 module project (
 		/////// board clocks                      ////////////
 		input logic CLOCK_50_I,                   // 50 MHz clock
