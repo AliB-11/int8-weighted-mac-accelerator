@@ -1,6 +1,4 @@
-# int8-depthwise-conv-accelerator
-
-> **Status:** M1 complete (September 2026)
+# int8-depthwise-convolution-accelerator
 
 `int8-depthwise-conv-accelerator` is a parameterized weight-stationary `INT8` 1D convolution accelerator implemented in SystemVerilog, targeting an AMD/Xilinx Artix-7 FPGA.
 
@@ -25,8 +23,6 @@ The design is synthesized for the Artix-7 `xc7a100tcsg324-1`, using 5 DSP48E1 bl
 | Timing Violations       |                  0 |
 | Randomized Verification |      10,000 trials |
 
-[Utilization](docs/util.rpt)
-[Timing Report](docs/timing.rpt)
 
 ## Architecture
 
@@ -149,14 +145,11 @@ int8-depthwise-conv-accelerator/
 ├── syn/
 │   └── run_impl.tcl
 │
-├── Makefile
-├── requirements.txt
 └── README.md
 ```
 
 ## Future Work
 
-- Run the full verification suite across additional kernel sizes such as `K=3`, `K=5`, and `K=9`
 - Explore additional DSP48E1 pipelining for higher Fmax
 - Extend the architecture to multiple input/output channels
 - Add board-level hardware validation
